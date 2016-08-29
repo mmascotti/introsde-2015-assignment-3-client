@@ -1,0 +1,162 @@
+https://introsde-assignment3-server.herokuapp.com/ws?wsdl
+
+----------------------------------------------
+
+1: readPersonList()
+
+----------------------------------------------
+
+4: createPerson(p)
+p = [null] Alice Ecila, 12. mag 1957
+
+result:
+[51] Alice Ecila, 12. mag 1957
+
+----------------------------------------------
+
+2: readPerson(51)
+[51] Alice Ecila, 12. mag 1957
+
+----------------------------------------------
+
+3: updatePerson(p)
+p = [51] Barbara Ecila, 12. mag 1957
+
+Before update (value in database): 
+[51] Alice Ecila, 12. mag 1957
+
+After update/result: 
+[51] Barbara Ecila, 12. mag 1957
+
+----------------------------------------------
+
+4: createPerson(p)
+p = [null] Carol Lorac, 06. apr 1954
+
+result:
+[52] Carol Lorac, 06. apr 1954
+
+----------------------------------------------
+
+1: readPersonList()
+[51] Barbara Ecila, 12. mag 1957
+[52] Carol Lorac, 06. apr 1954
+
+----------------------------------------------
+
+5: deletePerson(51)
+
+person list before deleting: 
+[51] Barbara Ecila, 12. mag 1957
+[52] Carol Lorac, 06. apr 1954
+
+person list after deleting: 
+[52] Carol Lorac, 06. apr 1954
+
+----------------------------------------------
+
+7: readMeasureTypes()
+[height, weight]
+
+----------------------------------------------
+
+9: savePersonMeasure(52, m)
+m = [null] height: 1.60 real ([no date])
+
+Before saving measure: 
+[52] Carol Lorac, 06. apr 1954
+	[53] height: 1.75 real (29. ago 2016 21:07:42)
+	[54] weight: 60 integer (29. ago 2016 21:07:42)
+
+result: 
+[52] Carol Lorac, 06. apr 1954
+	[54] weight: 60 integer (29. ago 2016 21:07:42)
+	[55] height: 1.60 real (29. ago 2016 21:07:43)
+
+----------------------------------------------
+
+10: updatePersonMeasure(52, m)
+m = [55] height: 2 real (29. ago 2016 21:07:43)
+
+Before updating measure: 
+[52] Carol Lorac, 06. apr 1954
+	[54] weight: 60 integer (29. ago 2016 21:07:42)
+	[55] height: 1.60 real (29. ago 2016 21:07:43)
+
+result: 
+[52] Carol Lorac, 06. apr 1954
+	[54] weight: 60 integer (29. ago 2016 21:07:42)
+	[55] height: 2 real (29. ago 2016 21:07:43)
+
+----------------------------------------------
+
+8: readPersonMeasure(52, height, 55)
+[55] height: 2 real (29. ago 2016 21:07:43)
+
+----------------------------------------------
+
+9: savePersonMeasure(52, m)
+m = [null] weight: 70 integer ([no date])
+
+Before saving measure: 
+[52] Carol Lorac, 06. apr 1954
+	[54] weight: 60 integer (29. ago 2016 21:07:42)
+	[55] height: 2 real (29. ago 2016 21:07:43)
+
+result: 
+[52] Carol Lorac, 06. apr 1954
+	[55] height: 2 real (29. ago 2016 21:07:43)
+	[56] weight: 70 integer (29. ago 2016 21:07:44)
+
+----------------------------------------------
+
+9: savePersonMeasure(52, m)
+m = [null] weight: 71 integer ([no date])
+
+Before saving measure: 
+[52] Carol Lorac, 06. apr 1954
+	[55] height: 2 real (29. ago 2016 21:07:43)
+	[56] weight: 70 integer (29. ago 2016 21:07:44)
+
+result: 
+[52] Carol Lorac, 06. apr 1954
+	[55] height: 2 real (29. ago 2016 21:07:43)
+	[57] weight: 71 integer (29. ago 2016 21:07:44)
+
+----------------------------------------------
+
+9: savePersonMeasure(52, m)
+m = [null] weight: 72 integer ([no date])
+
+Before saving measure: 
+[52] Carol Lorac, 06. apr 1954
+	[55] height: 2 real (29. ago 2016 21:07:43)
+	[57] weight: 71 integer (29. ago 2016 21:07:44)
+
+result: 
+[52] Carol Lorac, 06. apr 1954
+	[55] height: 2 real (29. ago 2016 21:07:43)
+	[58] weight: 72 integer (29. ago 2016 21:07:44)
+
+----------------------------------------------
+
+9: savePersonMeasure(52, m)
+m = [null] weight: 73 integer ([no date])
+
+Before saving measure: 
+[52] Carol Lorac, 06. apr 1954
+	[55] height: 2 real (29. ago 2016 21:07:43)
+	[58] weight: 72 integer (29. ago 2016 21:07:44)
+
+result: 
+[52] Carol Lorac, 06. apr 1954
+	[55] height: 2 real (29. ago 2016 21:07:43)
+	[59] weight: 73 integer (29. ago 2016 21:07:45)
+
+----------------------------------------------
+
+6: readPersonHistory(52, weight)
+[58] weight: 72 integer (29. ago 2016 21:07:44)
+[57] weight: 71 integer (29. ago 2016 21:07:44)
+[56] weight: 70 integer (29. ago 2016 21:07:44)
+[54] weight: 60 integer (29. ago 2016 21:07:42)
